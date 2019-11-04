@@ -1,9 +1,9 @@
-require 'ruby-gems'
+require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
 
 
 get '/' do
-  erb 'Мой первый сайт Блогasdsa'
+  erb :index
 end
 
