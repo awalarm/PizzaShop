@@ -8,3 +8,8 @@ function somthing()
 
 		alert(x);
 	}
+
+function add_to_cart()
+{
+	alert('hello function');
+}
