@@ -1,3 +1,6 @@
+
+
+
 function somthing()
 	{
 		var x = window.localStorage.getItem('aaa');
@@ -17,10 +20,10 @@ function add_to_cart(id)
 	x = x * 1 + 1;
 	window.localStorage.setItem(key, x);
 
-	update_arders_input()
+	update_orders_input()
 }
 
-function update_arders_input()
+function update_orders_input()
 {
 	var orders = cart_get_number_orders();
 	$('#orders_input').val(orders);
