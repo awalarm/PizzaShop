@@ -1,10 +1,17 @@
 <h2>привет и все</h2>
 
-<% @products.each do |p| %>
-<p>
-	test
-</p>
+<div class="row">
+	<% @products.each do |p| %>
+	<div class="col-md-3">
+		<%= p.title %><br>
+		<img src=" <%= p.path_to_imege %>" /><br>
+		<%= p.description %> <br>
+		<%= p.price %> руб. 
+		
 
-<% end %>
+	</div>
+	<% end %>
+
+</div>
 <button class="btn btn-primary" onclick="somthing()" > clik me</button>
 
