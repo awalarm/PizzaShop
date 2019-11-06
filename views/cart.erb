@@ -28,3 +28,35 @@
         	 
 	    </tbody>
 	</table>
+
+<form class="form-horizontal" action="/place_order" method="POST">
+
+	<input type="hidden" name="order[orders_input]" value="<%= @orders_input %>"/>
+
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Ваше имя</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Имя">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Ваш телефон</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="8(999)999-99-99">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Адрес доставки</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="Полный адрес">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Заказать</button>
+    </div>
+  </div>
+</form>
