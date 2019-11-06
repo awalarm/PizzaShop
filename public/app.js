@@ -70,3 +70,15 @@ function cart_get_number_orders()
 	}
 	return orders;
 }
+
+function cancel_order()
+{
+	window.localStorage.clear();
+
+	update_orders_input();
+	update_orders_button();
+
+	$('#cart').text('Ваша козина пустая.');
+
+	return false;
+}
