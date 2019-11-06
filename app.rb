@@ -8,7 +8,7 @@ set :database, "sqlite3:pizzashop.db"
 class Product < ActiveRecord::Base
 end
 
-def parse_arders_input orders_input
+def parse_orders_input orders_input
 
 	s1 = orders_input.split(/,/)
 
@@ -32,12 +32,16 @@ end
 
 get '/' do
 	@products = Product.all
-  erb :index
+	erb :index
 end
 
 post '/cart' do
 	orders_input = params[:orders]
-	@orders = parse_arders_input orders_input
+	@items = parse_orders_input orders_input
+	
+	@items.each do |item|
+	item[0] = Product.find(item[0])
+	end
 	erb :cart
 end
 
